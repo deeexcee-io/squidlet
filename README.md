@@ -51,7 +51,7 @@ Using proxy address http://10.10.121.66:3128
 
 ## Is it Accurate?
 
-You may need to tweak the threads. Obviously the higher the thread count the more prone it is to missing a port. I found 20 to be both accurate and fast (enough).
+You may need to tweak the threads. Obviously the higher the thread count the more prone it is to either missing a port or reporting false positives. I found 20 to be both accurate and fast (enough).
 
 # Install and Useage
 
