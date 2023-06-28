@@ -1,24 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import sys, socket
-import ssl
-import urllib.request, urllib.error, urllib.parse, http.client
+import sys
+import urllib.request
+import urllib.error
 from urllib.parse import urlparse
 
 class URLRequest(object):
     def get(self, url_request, proxy_address):
-
         try:
-            # if proxy_address is not "":
-            #     print("[*] Using Proxy Address : {}".format(proxy_address))
-            # else:
-            #     print("Squid Proxy address empty, try again!")
-
             parse = urlparse(proxy_address)
             proxy_scheme = parse.scheme
             proxy = str(parse.hostname) + ':' + str(parse.port)
-            proxy_handler = urllib.request.ProxyHandler({ proxy_scheme: proxy})
+            proxy_handler = urllib.request.ProxyHandler({proxy_scheme: proxy})
             opener = urllib.request.build_opener(proxy_handler)
             urllib.request.install_opener(opener)
             req = urllib.request.Request(url_request)
@@ -33,5 +24,5 @@ class URLRequest(object):
             pass
 
 if __name__ == '__main__':
-    URLRequest = URLRequest()
-    URLRequest
+    url_request = URLRequest()
+    # Use the URLRequest object as needed
