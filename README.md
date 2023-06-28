@@ -3,7 +3,7 @@ Squid Pivoting Open Port Scanner - v2
 
 ## What is it? 🤷🏼‍♂️
 
-Just an updated version of this tool - https://github.com/aancw/spose which a squid proxy port scanner.
+Just an updated version of this tool - https://github.com/aancw/spose which a squid proxy port scanner. It detects open ports behind squid proxy for CTF and pentest purpose using http proxy method.
 
 All credit to the original author. Updated with love and chatgpt <3
 
