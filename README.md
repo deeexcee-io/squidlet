@@ -5,7 +5,7 @@ Squid Pivoting Open Port Scanner - v2
 
 Just an updated version of this tool - https://github.com/aancw/spose which a squid proxy port scanner.
 
-All credit to the original author. I just ran it through chatgpt, told it to add threading to make it faster and run through the whole 0-65535 port range instead of a handful of ports.
+All credit to the original author. Updated with love and chatgpt <3
 
 ## Why is it better? 💡
 
