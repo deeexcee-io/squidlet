@@ -12,7 +12,7 @@ All credit to the original author. Updated with love and chatgpt <3
 Its faster. Plus it scans all ports by default. You shouldnt have to mess with the code to find all the open ports. Plus you can ctrl-c to kill it which you cant do with spose.
 
 ### Scientific Testing 🤣
-squidlet takes 328 seconds to scan the full 65535 port range. 
+**squidlet** takes 328 seconds to scan the full 65535 port range. 
 
 ```bash
 └─# time python3 squidlet.py --proxy http://10.10.121.66:3128 --target 10.10.121.66 --threads 20
@@ -28,7 +28,7 @@ sys     36.03s
 cpu     50%
 ```
 
-spose takes ***** seconds to scan the top 1000 ports, which you have to add manually. 
+**spose** takes ***** seconds to scan the top 1000 ports, which you have to add manually. 
 
 I got tired of waiting, its been over 10 minutes now. I cant even ctrl-c it
 
@@ -46,7 +46,17 @@ Using proxy address http://10.10.121.66:3128
 
 
 ```
+**nmap** can take over an hour in some cases...crazy
 
+```bash
+┌──(root㉿kali)-[/opt/squidlet]
+└─# time proxychains -q nmap -p- 10.10.92.243 -Pn -sTV -n
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-07 16:50 BST
+Stats: 0:00:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 0.05% done
+Stats: 0:02:36 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 3.69% done; ETC: 18:01 (1:07:50 remaining)
+```
 
 
 ## Is it Accurate?
